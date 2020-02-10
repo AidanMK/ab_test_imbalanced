@@ -20,9 +20,11 @@ The figure below shows daily minutes per user before and after the start of the 
 
 <img src="https://github.com/AidanMK/ab_test_imbalanced/blob/master/plots/trends_all.png" width="600" height="450">
 
-Since treated and control users have parallel trends in the pre-experiment period, a difference-in-differences methodology can be used to estimate the causal effect of the treatment. The regression shows that treated users increased minutes on the app by 15 percent, which is significant at the 5 percent level (standard errors are clustered at the user level).  
+Since treated and control users have parallel trends in the pre-experiment period, a difference-in-differences methodology can be used to estimate the causal effect of the treatment. The regression shows that treated users increased their minutes on the app by 15 percent, which is significant at the 5 percent level (with standard errors clustered at the user level).  
 
 *By user type* 
+
+Next we check whether the feature had different effects for the three different user types (viewers, non-viewers, and new users).
 
 <img src="https://github.com/AidanMK/ab_test_imbalanced/blob/master/plots/trends_viewer.png" width="600" height="450">
 
@@ -30,4 +32,7 @@ Since treated and control users have parallel trends in the pre-experiment perio
 
 <img src="https://github.com/AidanMK/ab_test_imbalanced/blob/master/plots/trends_newuser.png" width="600" height="450">
 
+The treatment effect is largest for viewers, who make up about 25% of the sample and also spend substantially more time on the app than other users. The effect is smaller, but still positive and significant, for non-viewers, who make up more than 70% of the sample. There is no effect for new users, although this effect is harder to measure because of more limited pre-treatment data. Treatment effects do not differ by user gender.
+
+For all user types, the new feature has either a positive effect or no effect on minutes. Therefore, we recommend rolling out the feature to all users. 
 
