@@ -20,7 +20,7 @@ The figure below shows daily minutes per user before and after the start of the 
 
 <img src="https://github.com/AidanMK/ab_test_imbalanced/blob/master/plots/trends_all.png" width="650" height="400">
 
-Since treated and control users have parallel trends in the pre-experiment period, a difference-in-differences methodology can be used to estimate the causal effect of the treatment. The regression shows that treated users increased their minutes on the app by 15 percent, which is significant at the 5 percent level (with standard errors clustered at the user level).  
+Since treated and control users have parallel trends in the pre-experiment period, a difference-in-differences regression can be used to estimate the causal effect of the treatment. The regression shows that treated users increased their minutes on the app by 15 percent, which is significant at the 5 percent level (with standard errors clustered at the user level).  
 
 *By user type* 
 
